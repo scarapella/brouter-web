@@ -100,6 +100,7 @@ var paths = {
     ],
     layersConfigDestName: 'layersConf.js',
     boundaries: ['resources/boundaries/*.geojson', 'resources/boundaries/*.topo.json'],
+    sprites: ['resources/sprites/**'],
     zip: ['dist/**', 'index.html', 'config.template.js', 'keys.template.js'],
     dest: 'dist',
     destName: 'brouter-web',
@@ -215,6 +216,10 @@ gulp.task('locales', function () {
 
 gulp.task('boundaries', function () {
     return gulp.src(paths.boundaries).pipe(gulp.dest(paths.dest + '/boundaries'));
+});
+
+gulp.task('sprites', function () {
+    return gulp.src(paths.sprites).pipe(gulp.dest(paths.dest + '/sprites'));
 });
 
 gulp.task('changelog', function (cb) {
@@ -414,6 +419,7 @@ gulp.task(
         'fonts',
         'locales',
         'boundaries',
+        'sprites',
         'changelog'
     )
 );
