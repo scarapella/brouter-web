@@ -64,7 +64,7 @@ const style = {
             "maxzoom": 14
         }
     },
-    "sprite": "http://localhost:3000/dist/sprites/opentrailmap",
+    "sprite": "https://paddlemap.net/dist/sprites/opentrailmap",
     "layers": [
         {
             "id": "restricted-waterways",
