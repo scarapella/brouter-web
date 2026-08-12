@@ -929,7 +929,7 @@ const style = {
             "maxzoom": 14
         }
     },
-    "sprite": "https://opentrailmap.us/style/sprites/opentrailmap",
+    "sprite": "https://opentrailmap.us/sprites/opentrailmap",
     "glyphs": "https://font.americanamap.org/{fontstack}/{range}.pbf",
     "layers": [
         {

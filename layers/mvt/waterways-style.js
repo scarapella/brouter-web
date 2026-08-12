@@ -64,7 +64,7 @@ const style = {
             "maxzoom": 14
         }
     },
-    "sprite": "https://opentrailmap.us/style/sprites/opentrailmap",
+    "sprite": "https://opentrailmap.us/sprites/opentrailmap",
     "layers": [
         {
             "id": "restricted-waterways",
