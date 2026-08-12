@@ -11,6 +11,7 @@ yarn.lock
 layers/
 locales/*.json
 resources/boundaries/
+resources/sprites/
 resources/standalone/*.sh
 profiles2/
 tests/**/*.json
