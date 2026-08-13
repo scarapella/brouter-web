@@ -21,7 +21,8 @@ BR.confLayers.permanentOverlays = [
 
 BR.confLayers.defaultActiveOverlays = [
     'waterways',
-    'opentrailmap-canoe-pois'
+    'opentrailmap-canoe-pois',
+    'opentrailmap-canoe'
 ];
 
 BR.confLayers.defaultOverlays =  [
