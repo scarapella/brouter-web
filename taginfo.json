@@ -372,6 +372,11 @@
             "value": "pier",
             "object_types": ["way"],
             "description": "Used to identify piers that could be used for portaging of paddlecraft."
+        },
+        {
+            "key": "railway",
+            "object_types": ["way"],
+            "description": "Used to identify rail portages."
         }
     ]
 }

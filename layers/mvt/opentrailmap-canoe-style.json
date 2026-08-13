@@ -40,13 +40,22 @@
             "source-layer": "trail",
             "minzoom": 5,
             "filter": [
-                "all",
+                "any",
                 [
-                    "any",
-                    ["has","highway"],
-                    ["==", ["get", "man_made"], "pier"]
+                    "all",
+                    [
+                        "any",
+                        ["has","highway"],
+                        ["==", ["get", "man_made"], "pier"],
+                        ["has","railway"]
+                    ],
+                    ["in",["get","portage"],["literal",["yes", "permit", "designated", "permissive", "customers"]]]
                 ],
-                ["in",["get","portage"],["literal",["yes", "permit", "designated", "permissive", "customers"]]]
+                [
+                    "all",
+                    ["has","railway"],
+                    ["in",["get","canoe"],["literal", ["yes", "permit", "designated", "permissive", "customers"]]]
+                ]
             ],
             "layout": {
                 "line-cap": "round",
