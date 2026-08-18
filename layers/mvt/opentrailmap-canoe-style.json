@@ -19,9 +19,41 @@
             "source-layer": "trail",
             "minzoom": 5,
             "filter": [
-                "all",
-                ["has","waterway"],
-                ["in",["get","canoe"],["literal", ["yes", "permit", "designated", "permissive", "customers"]]]
+                "any",
+                [
+                    "all",
+                    ["has","waterway"],
+                    ["in",["get","canoe"],["literal", ["yes", "permit", "designated", "permissive", "customers"]]]
+                ],
+                [
+                    "all",
+                    ["==", ["get", "waterway"], "canoe_pass"],
+                    [
+                        "!",
+                        [
+                            "any",
+                            ["in", ["get", "canoe"], ["literal", ["no", "private", "discouraged"]]],
+                            [
+                                "all",
+                                ["!", ["has", "canoe"]],
+                                ["in", ["get", "boat"], ["literal", ["no", "private", "discouraged"]]]
+                            ],
+                            [
+                                "all",
+                                ["!", ["has", "canoe"]],
+                                ["!", ["has", "boat"]],
+                                ["in", ["get", "access"], ["literal", ["no", "private", "discouraged"]]]
+                            ],
+                            [
+                                "all",
+                                ["!", ["has", "canoe"]],
+                                ["!", ["has", "boat"]],
+                                ["!", ["has", "access"]],
+                                ["in",["get", "tunnel"], "flooded"]  
+                            ]                
+                        ]
+                    ]
+                ]
             ],
             "layout": {
                 "line-cap": "round",
