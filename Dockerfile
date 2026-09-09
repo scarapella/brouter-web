@@ -22,7 +22,7 @@ RUN yarn install
 RUN yarn run build
 
 FROM docker.io/library/nginx:alpine
-COPY --from=build /tmp/paddlemap/index.html /usr/share/nginx/html
+COPY --from=build /tmp/paddlemap/*.html /usr/share/nginx/html
 COPY --from=build /tmp/paddlemap/taginfo.json /usr/share/nginx/html
 COPY --from=build /tmp/paddlemap/*.png /usr/share/nginx/html
 COPY --from=build /tmp/paddlemap/*.ico /usr/share/nginx/html
